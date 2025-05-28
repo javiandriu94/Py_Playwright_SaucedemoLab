@@ -8,6 +8,11 @@ def before_all(context):
     context.username = os.getenv("SAUCE_USERNAME")
     context.password = os.getenv("SAUCE_PASSWORD")
 
+     # Checkout info
+    context.first_name = os.getenv("FIRST_NAME")
+    context.last_name = os.getenv("LAST_NAME")
+    context.postal_code = os.getenv("POSTAL_CODE")
+
     playwright = sync_playwright().start()
     context.browser = playwright.chromium.launch(headless=False, slow_mo=1000)
     context.playwright = playwright
