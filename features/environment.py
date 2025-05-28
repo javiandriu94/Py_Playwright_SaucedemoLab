@@ -8,6 +8,10 @@ def before_all(context):
     context.username = os.getenv("SAUCE_USERNAME")
     context.password = os.getenv("SAUCE_PASSWORD")
 
+     # Product names
+    context.product_1 = os.getenv("PRODUCT_1")
+    context.product_2 = os.getenv("PRODUCT_2")
+    
      # Checkout info
     context.first_name = os.getenv("FIRST_NAME")
     context.last_name = os.getenv("LAST_NAME")
